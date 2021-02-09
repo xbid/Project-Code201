@@ -68,6 +68,26 @@ blockquote{
     font-weight: bold;
 }
 
+.topten h3 {
+    color: mediumblue;
+    font-weight: bold;
+    font-size: 25px;
+    margin-bottom: 10;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.topten p {
+    margin-top: 20px;
+}
+
+.topten div ol li{
+    font-size: 20px;
+    margin: 10px;
+    margin-left: 100px;
+}
+
 footer{
     background-color: rgb(111, 145, 250);
     margin-bottom: 30px;
