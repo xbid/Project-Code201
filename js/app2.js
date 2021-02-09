@@ -23,3 +23,22 @@ for(let i = 1; i <= 4 ; i++){
     break;
   }
 }
+
+let myKids = ['Majd', 'Leen', 'Majdoleen'];
+
+let found = false;
+
+for (let index = 0; index < 6; index++){
+  let myFutureKids = prompt ('Which one of them do you think will be my favorite kid ..?');
+  for (let a = 0; a < 4; a++) {
+    if (myFutureKids.toLowerCase() === myKids[a]) {
+      alert('Ok infact all of them are will be my favorite');
+      console.log(myFutureKids);
+      found = true;
+      break;
+    }
+  }
+  if(found===true){
+    break;
+  }
+}
