@@ -4,11 +4,13 @@ let score = 0;
 let userName = prompt('\t   Who are you..?\n\nPlease tell us your name..!\n ');
 console.log(userName);
 
-function greeting(message){
-  alert(message);
-}
-greeting('\n\tWelcome to my WebPage..' + userName.toUpperCase() + ' \n\t\t\tIam Abdallah\n\t\tI used to work as a chef\n\t\t\tIam from irbid\nI would like it if you played this guessing game');
 
+   
+   alert('\n\tWelcome to my WebPage..' + userName.toUpperCase() + ' \n\t\t\tIam Abdallah\n\t\tI used to work as a chef\n\t\t\tIam from irbid\nI would like it if you played this guessing game');
+
+
+function q1 ()
+{
 let userConfirm = prompt('Do You Like Quzzies? Answer with yes/no');
 
 console.log(userConfirm.toLowerCase());
@@ -21,7 +23,10 @@ if (userConfirm ==='yes' || userConfirm ==='y'){
   console.log('Come On ..!, Just try it\n\tIt will be fun');
 }
 console.log(userConfirm);
+}
 
+function q2()
+{
 let favFood = prompt ('Do i love Mansaf?');
 
 console.log(favFood.toLowerCase());
@@ -36,6 +41,9 @@ if (favFood ==='yes' || favFood ==='y'){
   console.log(favFood);
   score = score +1 ;
 }
+}
+
+function q3(){
 
 let petType = prompt ('Am i a cat person');
 
@@ -51,7 +59,9 @@ if (petType ==='yes' || petType ==='y'){
   console.log(petType);
   score = score +1 ;
 }
+}
 
+function q4() {
 let bestStudent = prompt ('Do you think iam a good student?');
 
 console.log(bestStudent.toLowerCase());
@@ -66,7 +76,9 @@ if (bestStudent ==='yes' || bestStudent ==='y'){
   console.log(bestStudent);
   score = score +1 ;
 }
+}
 
+function q5(){
 let homeJob = prompt ('Because iam a chef as i said before, Do you think i cook in home?');
 
 console.log(homeJob.toLowerCase());
@@ -81,7 +93,9 @@ if (homeJob ==='yes' || homeJob ==='y'){
   console.log(homeJob);
   score = score +1 ;
 }
+}
 
+function q6(){
 let favTime = prompt ('what time do i like to work on tasks? is it night?');
 
 console.log(favTime.toLowerCase());
@@ -96,45 +110,72 @@ if (favTime ==='yes' || favTime ==='y'){
   console.log(favTime);
   score = score +1 ;
 }
+
 alert('welcome again' + userName.toUpperCase() + 'I hope you enjoyed the quizes see told you it will be fun' );
+}
 
-let myBirthYear = prompt('\t    Try to guess my birth Year?\n\t    Hint:Iam from the late 80`s\nPlease mind that you have only 4 Attempts ');
 
-myBirthYear = parseInt(myBirthYear);
+function q7()
+{
 
-for(let i = 1; i <= 4 ; i++){
-  if(myBirthYear > 1988 ){
-    alert ('No Try Again and try to type a lower number than that');
-    myBirthYear = prompt('Enter your Guess again you have 3 Another Attempts');
-    if (i===4) {
-      alert('I`am from 1988');
-    }
-  }else if(myBirthYear < 1988){
-    alert ('No Try Again and try to type a greater number than that');
-    myBirthYear = prompt('Enter your Guess again you have 3 Another Attempts');
-    if (i===4) {
-      alert('I`m from 1988');
-    }
-  }else{
-    alert('Yes My year birth date is 1988');
+  let myBirthYear ;
+for(let i = 1; i <= 4 ; i++)
+{
+   myBirthYear = prompt('\t    Try to guess my birth Year?\n\t    Hint:Iam from the late 80`s\nPlease mind that you have only 4 Attempts ');
+   myBirthYear = parseInt(myBirthYear);
+
+   if ( myBirthYear === 1988)
+  {
+    alert('Yes My year birth date is 1988')
+    break ;
     score = score +1 ;
-    break;
+
+  }else if (myBirthYear < 1988)
+  {
+    alert ('No Try Again and try to type a greater number than that');
+  }else if (myBirthYear >1988)
+  {
+    alert ('No Try Again and try to type a lower number than that');
   }
 }
 
+
+}
+function q8()
+{
 let myKids = ['majd', 'leen', 'majdoleen'];
-let myFavKid = prompt ('\n\t\tLets Say i will have three kids in the future?\n\t\t\t |  Majd  |  leen  |  Majdoleen  |\nWhich one of them do you think will be my favorite kid ..?');
+let c= 0;
+let m = 0;
 for (let index = 0; index <= 3; index++){
+  c++
+  let myFavKid = prompt ('\n\t\tLets Say i will have three kids in the future?\n\t\t\t |  Majd  |  leen  |  Majdoleen  |\nWhich one of them do you think will be my favorite kid ..?');
   for (let a = 0; a <=3; a++) {
     if (myFavKid.toLowerCase() === myKids[a]) {
       alert('Basiclly Majdoleen Contains Majd & leen put them togther');
       console.log('And Voila ..!');
       score = score +1;
-      break;
+      m ++;
     }
   }
-  alert('Ok infact all of them will be my favorite');
+  if (m==1)
+  break;
+  
 }
+if (c == 4){
 
+alert('Ok infact all of them will be my favorite');
+}
 document.write(myKids);
 alert(`Here is your Score: ${score} out of 7`);
+}
+
+q1();
+q2();
+q3();
+q4();
+q5();
+q6();
+q7();
+q8();
+
+
